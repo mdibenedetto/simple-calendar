@@ -1,0 +1,15 @@
+<div class="date-container">
+  <select #selMonth name="selMonth" [(ngModel)]="selectedMonth">
+    <option *ngFor="let month of monthNames; let index = index" [value]="index">
+      {{ month }}
+    </option>
+  </select>
+  <span>{{ selectedYear }}</span>
+</div>
+
+<br />
+<calendar-event
+  [year]="selectedYear"
+  [monthIndex]="selectedMonth"
+  [events]="dummyEvents"
+></calendar-event>

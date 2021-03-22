@@ -1,0 +1,28 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  max-width: fit-content;
+  background-color: #fffeff;
+  padding: 10px;
+
+  .day {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+
+    &.prev-month {
+      color: #cbcacc;
+    }
+
+    &.has-event {
+      background-color: #eaebf8;
+      border-radius: 50%;
+    }
+  }
+}
+
+pre {
+  background-color: white;
+  border: 1px solid;
+  padding: 10px;
+}

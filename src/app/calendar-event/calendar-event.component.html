@@ -1,0 +1,18 @@
+<div class="calendar">
+  <span
+    class="day"
+    [ngClass]="{
+      'prev-month': day.isPrevMonth,
+      'has-event': !!day.event
+    }"
+    *ngFor="let day of days"
+    title="{{ day.event?.description }}"
+    >{{ day.value }}
+  </span>
+</div>
+
+<br />
+<h2>Dummy event</h2>
+<pre>
+  {{ events | json }}
+</pre>
