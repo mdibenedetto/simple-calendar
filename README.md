@@ -1,5 +1,19 @@
 # CalendarManager
 
+This repo contains a calendar manager. In progres...
+
+## Preview App
+
+<img src="./docs/app-preview.png" width="500" alt = "App Preview">
+
+# Description
+
+This repo is playground to test and experiment Angular 9+:
+
+![alt](./docs/tree-source-files/source-tree-1.png)
+
+## Pre requiments
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
