@@ -1,16 +1,14 @@
-# CalendarManager
-
-This repo contains a calendar manager. In progres...
-
-## Preview App
-
-<img src="./docs/app-preview.png" width="500" alt = "App Preview">
+# Simple Calendar
 
 # Description
 
-This repo is playground to test and experiment Angular 9+:
+This repo contains an implementation of a simple calendar component
 
-![alt](./docs/tree-source-files/source-tree-1.png)
+## Preview App
+
+[Simple Calendar - Demo link](https://mdibenedetto.github.io/simple-calendar)
+
+<img src="./docs/app-preview.png" width="500" alt = "App Preview">
 
 ## Pre requiments
 

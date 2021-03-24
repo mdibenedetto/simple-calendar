@@ -1,9 +1,17 @@
+:host {
+  --column-conuter: 7;
+}
+
 .calendar {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(var(--column-conuter), auto);
   max-width: fit-content;
   background-color: #fffeff;
   padding: 10px;
+
+  .day-header {
+    font-weight: bold;
+  }
 
   .day {
     padding: 10px;
@@ -17,6 +25,11 @@
     &.has-event {
       background-color: #eaebf8;
       border-radius: 50%;
+    }
+
+    &.today {
+      background-color: #1a73e8;
+      color: #fff;
     }
   }
 }

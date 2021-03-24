@@ -1,0 +1,40 @@
+name: Publish GH-PAGES
+
+on:
+  push:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+      - name: Install
+        run: npm i
+
+      - name: Build
+        run: npm run build -- --prod --base-href "/simple-calendar/"
+
+      - name: List Disist files
+        run: |
+          ls -d ./dist/**
+          ls ./dist/calendar-manager
+
+      - name: Checkout Gh-Pages
+        run: git fetch && git checkout gh-pages
+
+      - name: Add dist folder
+        run: |
+          git add ./dist/calendar-manager/**
+          git mv --force ./dist/calendar-manager/** ./
+          git add -u ./
+          git commit -m "New update"
+          git push

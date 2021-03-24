@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CalendarEventComponent } from './calendar-event/calendar-event.component';
+import { CalendarEventComponent } from './core/components/calendar-event/calendar-event.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

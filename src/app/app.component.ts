@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEvent } from './model/iday';
+import { CalendarEvent } from './core/model';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,9 @@ export class AppComponent implements OnInit {
   title = 'calendar-manager';
   monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
-  selectedMonth = new Date().getMonth();
+  selectedMonth = new Date().getMonth() + 1;
   selectedYear = new Date().getFullYear();
-  dummyEvents: IEvent[] = [];
+  dummyEvents: CalendarEvent[] = [];
 
   ngOnInit(): void {
     this.createDummyEvents();

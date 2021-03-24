@@ -1,11 +1,15 @@
 <div class="calendar">
+  <span class="day day-header" *ngFor="let dayName of weekDays"
+    >{{ dayName }}
+  </span>
   <span
     class="day"
     [ngClass]="{
       'prev-month': day.isPrevMonth,
-      'has-event': !!day.event
+      'has-event': !!day.event,
+      today: day.isToday
     }"
-    *ngFor="let day of days"
+    *ngFor="let day of calendarDays"
     title="{{ day.event?.description }}"
     >{{ day.value }}
   </span>
