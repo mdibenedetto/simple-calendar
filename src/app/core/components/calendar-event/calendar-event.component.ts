@@ -62,7 +62,7 @@ export class CalendarEventComponent implements OnChanges {
     }
 
     private attachEvent(dayIndex: number): CalendarEvent {
-        const makeStringDate = (d: Date) => `${d.getFullYear()}-${d.getMonth()}-${d.getDay()}`;
+        const makeStringDate = (d: Date) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
         const strDateCalendar = makeStringDate(new Date(2021, this.monthIndex, dayIndex));
 
         const event = this.events.find(e => {
@@ -70,6 +70,7 @@ export class CalendarEventComponent implements OnChanges {
             return strDateEvent === strDateCalendar;
         })
 
+        
         return event;
     }
 
