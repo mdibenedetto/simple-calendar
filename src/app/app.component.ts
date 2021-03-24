@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   title = 'calendar-manager';
   monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
-  selectedMonth = new Date().getMonth() + 1;
+  selectedMonth = new Date().getMonth();
   selectedYear = new Date().getFullYear();
   dummyEvents: CalendarEvent[] = [];
 
